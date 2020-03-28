@@ -1,0 +1,24 @@
+@import "_variables";
+@import "_mixins";
+@import "_buttons";
+
+a {
+  @extend %button;
+  text-decoration: none;
+
+  // font-size: 2em;
+  
+  // &:nth-child(odd) {
+  //   @include link(skyblue);
+  // }
+
+  // &:nth-child(even) {
+  //   @include link(pink);
+  // }
+}
+
+
+button {
+  @extend %button;
+  border: none;
+}
