@@ -2,9 +2,9 @@
 @import "_mixins";
 @import "_buttons";
 
-a {
-  @extend %button;
-  text-decoration: none;
+// a {
+//   @extend %button;
+//   text-decoration: none;
 
   // font-size: 2em;
   
@@ -15,10 +15,26 @@ a {
   // &:nth-child(even) {
   //   @include link(pink);
   // }
-}
+// }
 
 
-button {
-  @extend %button;
-  border: none;
+// button {
+//   @extend %button;
+//   border: none;
+// }
+
+h1 {
+  color: red;
+
+  @include responsive("iphone"){
+    color: yellow;
+  }
+
+  @include responsive("iphone-l"){
+    color: blue;
+  }
+
+  @include responsive("tablet") {
+    color: green;
+  }
 }
