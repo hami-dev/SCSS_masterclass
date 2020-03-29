@@ -1,1 +1,15 @@
 node_modules
+.cache
+
+.gitignore
+
+dist
+src/scss/_buttons.scss
+src/scss/_mixins.scss
+src/scss/_variables.scss
+
+dist/index.html
+dist/styles.f7b3e8db.css
+dist/styles.f7b3e8db.css.map
+dist/styles.f7b3e8db.js
+dist/styles.f7b3e8db.js.map

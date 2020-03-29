@@ -2,8 +2,8 @@
   "name": "scss-masterclass",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/nomadcoders/scss-masterclass",
-  "author": "Nicolás Serrano Arévalo <itnico.las.me@gmail.com>",
+  "repository": "https://github.com/hami-dev/SCSS_masterclass.git",
+  "author": "hami-dev",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.4.5",
@@ -17,7 +17,9 @@
     "node-sass": "^4.12.0"
   },
   "scripts": {
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "start": "parcel index.html",
+    "project1": "parcel project1/project1.html"
   },
   "browserslist": {
     "browsers": [
