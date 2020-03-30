@@ -1,0 +1,15 @@
+%flex_column_aligncenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex_row_aligncenter {
+    display: flex;
+    align-items: center;
+}
+
+%mini_font {
+    font-size: 0.8em;
+    font-weight: 600;
+}

@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "gulp dev",
     "start": "parcel index.html",
-    "project1": "parcel project1/project1.html"
+    "project1": "parcel project1/project1.html",
+    "project2": "parcel project2/project2.html"
   },
   "browserslist": {
     "browsers": [
