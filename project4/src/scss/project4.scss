@@ -1,0 +1,149 @@
+@import "_variables";
+// @import "_prepared";
+
+
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    // width: 100%;
+    // height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    align-content: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 5px;
+
+        li {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            background-color: $colorGray;
+        }
+    }
+
+    ul:first-child {
+        li:not(:first-child) {
+            color: $colorGray;
+        }
+
+        &:hover {
+            background-color: $colorGray;
+            
+            & li:not(:first-child) {
+                color: white;
+            }
+        }
+    }
+
+    ul:last-child {
+        & li:last-child {
+            position: absolute;
+            font-size: 0.7em;
+            right: 10px;
+            align-self: flex-end;
+        }
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 35vh;
+    margin-top: 40px;
+
+    .article {
+        display: grid;
+        grid-template-rows: 12fr 1fr;
+    
+        .article__author {
+            font-weight: 500;
+            margin-left: 20px;
+            align-self: center;
+        }
+
+    }
+}
+
+
+.article__photo {
+    background-position: center center;
+    background-size: cover;
+}
+
+.article:nth-child(1) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014618__340.jpg);
+}
+
+.article:nth-child(2) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/30/12/29/bicycle-1872682__340.jpg);
+}
+
+.article:nth-child(3) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619__340.jpg);
+}
+
+.article:nth-child(4) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2015/11/07/11/51/china-1031557__340.jpg);
+}
+
+.article:nth-child(5) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2016/02/19/11/04/alley-1209553__340.jpg);
+}
+
+.article:nth-child(6) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2020/03/18/06/06/street-4942809__340.jpg);
+}
+
+.article:nth-child(7) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2014/07/31/00/35/incense-stick-405899__340.jpg);
+}
+
+.article:nth-child(8) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014616__340.jpg);
+}
+
+.article:nth-child(9) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2019/06/08/11/30/japan-4259948__340.jpg);
+}
+
+.article:nth-child(10) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/02/09/45/japan-1366872__340.jpg);
+}
+
+.article:nth-child(11) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/25/16/52/night-821494__340.jpg);
+}
+
+.article:nth-child(12) .article__photo {
+    background-image: url(https://cdn.pixabay.com/photo/2017/02/21/16/46/japan-2086585__340.jpg);
+}
+
+
+
