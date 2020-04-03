@@ -22,7 +22,9 @@
     "project1": "parcel project1/project1.html",
     "project2": "parcel project2/project2.html",
     "project3": "parcel project3/project3.html",
-    "project4": "parcel project4/project4.html"
+    "project4": "parcel project4/project4.html",
+    "project5": "parcel project5/project5.html"
+
   },
   "browserslist": {
     "browsers": [
