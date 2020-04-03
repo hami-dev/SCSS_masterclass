@@ -1,7 +1,6 @@
 @import "_variables";
 @import "_elements";
 
-
 html,
 body {
     margin: 0;
@@ -26,6 +25,7 @@ header {
     position: fixed;
     display: flex;
     align-items: center;
+    box-shadow: 1px -10px 20px 5px $colorgray;
     
     & svg {
         margin-left: 15px;
@@ -33,15 +33,13 @@ header {
 
     & span {
         margin-left: 50px;
-        font-weight: 700;
+        font-weight: 900;
     }
 }
 
 .main__intro {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @extend %flexcolumnbetween;
     align-items: center;
 
     .main__photo {
@@ -49,8 +47,7 @@ header {
         height: 60vh;
         background-image: url(https://cdn.pixabay.com/photo/2016/03/09/09/20/abstract-1245745_960_720.jpg);
         margin-top: 20vh;
-        background-size: cover;
-        background-position: center center;
+        @extend %background;
     }
 
     .main__text {
@@ -75,98 +72,177 @@ header {
     width: 80%;
     margin-left: 10%;
     margin-top: 30px;
-}
 
-article:first-child {
-    margin-bottom: 10vh;
-
-    .main__title, p {
-        font-weight: 600;
-        padding-right: 50px;
-    }
-
-    .main__article {
-        font-size: 1.7em;
-    }
-
-    .main__arrow {
-        border-radius: 50%;
-        color: white;
-        background-color: black;
-        padding: 3px;
+    article:first-child {
+        margin-bottom: 10vh;
     
-        span {
-            height: 5px;
-        }
-    }
-}
-
-article:not(:first-child) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(1fr, 40vh);
-    grid-gap: 20px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid $colorgray;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .main__title {
-            display: block;
+        .main__title, p {
             font-weight: 600;
             padding-right: 50px;
         }
     
-        .main__article {
-            margin-top: 30px;
-            font-size: 1.7em;
-            display: block;
-        }
-
-        .btns {
+        p {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
+            align-items: center;
+    
+            span {
+                margin-left: 10px;
+            }
+        }
+    
+        .main__article {
+            font-size: 1.7em;
+        }
+    
+    }
+    
+    article:not(:first-child) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(1fr, 40vh);
+        grid-gap: 20px;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $colorgray;
+    
+        div {
+            @extend %flexcolumnbetween;
+    
+            .main__title {
+                display: block;
+                font-weight: 600;
+                padding-right: 50px;
+            }
+        
+            .main__article {
+                margin-top: 30px;
+                font-size: 1.7em;
+                display: block;
+            }
+    
+            .btns {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+    
+            .main__btn {
+                width: 130px;
+                text-align: center;
+                border: 1px solid $colorgray;
+                padding: 5px 15px;
+                border-radius: 25px;
+                margin-right: 10px;
+                font-weight: 600;
+                transition: all 0.2s;
+                margin-top: 40px;
+    
+                &:hover {
+                    @extend %hover;
+                }
+            }
         }
 
-        .main__btn {
-            width: 130px;
-            text-align: center;
-            border: 1px solid $colorgray;
-            padding: 5px 15px;
-            border-radius: 25px;
-            margin-right: 10px;
-            font-weight: 600;
-            transition: all 0.2s;
-            margin-top: 40px;
+        .article__img {
+            width: 100%;
+            height: 200px;
+            @extend %background;
+        }
+    }
+    
+    article:last-child{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-            &:hover {
-                @extend %hover;
+.main {
+    article:nth-child(2) {
+        .article__img {
+            background-image: url(https://cdn.pixabay.com/photo/2016/12/31/16/14/frozen-bubble-1943224__340.jpg);
+        }
+    }
+
+    article:nth-child(3) {
+        .article__img {
+            background-image: url(https://cdn.pixabay.com/photo/2016/01/19/17/53/writing-1149962__340.jpg);
+        }
+    }
+
+    article:nth-child(4) {
+        .article__img {
+            background-image: url(https://cdn.pixabay.com/photo/2015/04/20/13/38/furniture-731449__340.jpg);
+        }
+    }
+
+    article:nth-child(5) {
+        .article__img {
+            background-image: url(https://cdn.pixabay.com/photo/2016/11/21/15/13/blue-1845901__340.jpg);
+        }
+    }
+
+    article:nth-child(6) {
+        div:first-child{
+            .article__img {
+                background-image: url(https://cdn.pixabay.com/photo/2018/02/27/06/30/skyscraper-3184798__340.jpg);
+            }
+        }
+
+        div:last-child{
+            .article__img {
+                background-image: url(https://cdn.pixabay.com/photo/2015/10/12/15/01/mountain-984083__340.jpg);
             }
         }
     }
 
-    .article__img {
-        width: 100%;
-        height: 200px;
-        background-color: red;
+    article:nth-child(7) {
+        .article__img {
+            background-image: url(https://cdn.pixabay.com/photo/2014/09/07/22/34/car-race-438467__340.jpg);
+        }
+    }
+
+    article:nth-child(8) {
+        div:first-child{
+            .article__img {
+                background-image: url(https://cdn.pixabay.com/photo/2016/03/27/21/55/sunglasses-1284419__340.jpg);
+            }
+        }
+
+        div:last-child{
+            .article__img {
+                background-image: url(https://cdn.pixabay.com/photo/2019/12/10/10/01/wine-4685533__340.jpg);
+            }
+        }
     }
 }
 
-article:last-child{
-    grid-template-columns: repeat(3, 1fr);
-}
 
 
 
 footer {
+    margin-top: 30px;
     background-color: $colorDarkgray;
-    height: 25vh;
+    height: 30vh;
     color: white;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
 
-    
+    .footer__title {
+        display: grid;
+        grid-template-columns: 3fr repeat(3, 1fr);
+
+        span:first-child {
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        span:not(:first-child) {
+            padding-top: 10px;
+        }
+    }
+
+    .footer__subtitle {
+        display: flex;
+        flex-direction: column;
+    }
 }
