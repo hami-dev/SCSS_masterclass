@@ -1,0 +1,15 @@
+%flex_center_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%img_size {
+    width: 50%;
+    height: 15vh;
+}
+
+%bg_img_position {
+    background-position: center center;
+    background-size: cover;
+}
