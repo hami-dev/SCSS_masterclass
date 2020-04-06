@@ -1,0 +1,29 @@
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+
+    li {
+        margin-right: 10px;
+    }
+}
