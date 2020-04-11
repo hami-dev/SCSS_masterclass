@@ -10,3 +10,14 @@
     background-position: center center;
     background-size: cover;
 }
+
+%hover {
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+    transition-timing-function: ease-out;
+}
+
+%hover_out {
+    transition: all 0.3s;
+}
