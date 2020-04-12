@@ -1,0 +1,42 @@
+
+
+html,
+body,
+h1,
+a,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin-left: 5%;
+    width: 90%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    
+    .header__info {
+        background-color: rgb(255, 222, 35);
+    }
+    
+    .header__main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        .header__title {
+        grid-area: span 1 / span 2;
+        }
+    }
+
+    span {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
