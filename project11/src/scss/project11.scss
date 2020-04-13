@@ -40,3 +40,40 @@ header {
         align-items: center;
     }
 }
+
+.main__title {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 40px;
+}
+
+.products {
+    margin-left: 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 50px;
+
+    div {
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+    }
+
+    .product__photo {
+        background-image: url(https://cdn.pixabay.com/photo/2015/05/29/19/19/person-789663_960_720.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+
+    .product__category {
+        grid-area: span 1 / span 2;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+    }
+}
