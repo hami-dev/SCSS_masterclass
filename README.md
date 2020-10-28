@@ -1,4 +1,14 @@
-# SCSS_Class
+# 🍒SCSS_Class🍒  
 
-SCSS Class with Nicolas
-2020.03.28
+<br/>
+
+💗 SCSS, [멋진강의](https://nomadcoders.co/css-layout-masterclass/lobby)를 통해 공부했습니다!
+
+💗 클론 코딩을 통해 직접 구현해보았습니다.
+
+💗 구현된 화면은 [이쪽]()에서 확인 부탁드립니다!
+
+<br/>
+
+started at 2020.03.28  
+by hami-dev
